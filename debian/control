@@ -1,0 +1,21 @@
+Source: anything-sync-daemon
+Section: utils
+Priority: optional
+Maintainer: Jan Luca Naumann <j.naumann@fu-berlin.de>
+Build-Depends: debhelper (>= 9), dh-systemd (>= 1.5)
+Standards-Version: 3.9.8
+Homepage: https://github.com/graysky2/anything-sync-daemon
+Vcs-Git: https://github.com/JanLuca/anything-sync-daemon-debian.git
+Vcs-Browser: https://github.com/JanLuca/anything-sync-daemon-debian
+
+Package: anything-sync-daemon
+Architecture: all
+Depends: rsync, lsb-base (>= 3.2-14), ${misc:Depends}
+Description: Symlink and sync user specified directories into RAM
+ Anything-sync-daemon (asd) is a tiny pseudo-daemon designed to
+ manage user specified directories referred to as sync targets
+ from here on out, in tmpfs and to periodically sync them back to
+ the physical disc (HDD/SSD). This is accomplished via a symlinking step
+ and an innovative use of rsync to maintain synchronization between a
+ tmpfs copy and media-bound backups. Additionally, asd features several
+ crash recovery features.

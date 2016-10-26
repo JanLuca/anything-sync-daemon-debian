@@ -1,0 +1,20 @@
+Description: Add $remote_fs to init.d-script dependencies.
+Author: Jan Luca Naumann <j.naumann@fu-berlin.de>
+Forwarded: no
+Applied-Upstream: not-applied-yet
+Last-Update: 2016-10-26
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/init/asd.upstart
++++ b/init/asd.upstart
+@@ -1,8 +1,8 @@
+ #! /bin/sh
+ ### BEGIN INIT INFO
+ # Provides:          anything-sync-daemon
+-# Required-Start:    $local_fs
+-# Required-Stop:     $local_fs
++# Required-Start:    $local_fs $remote_fs
++# Required-Stop:     $local_fs $remote_fs
+ # Default-Start:     2 3 4 5
+ # Default-Stop:      0 1 6
+ # Short-Description: Keeps user defined dirs in tmpfs.

@@ -1,0 +1,4 @@
+version=4
+
+opts="filenamemangle=s/(?:.*?)?v?(\d[\d.]*)\.tar\.gz/anything-sync-daemon-$1.tar.gz/" \
+https://github.com/graysky2/anything-sync-daemon/tags (?:.*?/)?v?(\d[\d.]*)\.tar\.gz
